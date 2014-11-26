@@ -15,11 +15,11 @@ layout: default
 
 <div id="content">
     <div class="entry">
-        <wb:share-button appkey="6br1dJ" addition="simple" type="button" ralateUid="1895400745"></wb:share-button>
         <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
         <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
         {{ content }}
-
+<div align="right" style="margin-bottom:10px">
+        <wb:share-button appkey="6br1dJ" addition="simple" type="button" ralateUid="1895400745"></wb:share-button></div>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -61,13 +61,6 @@ layout: default
         {% endfor %}
         </ul>
     </div>
-    <script type="text/javascript">
-$('#disqus_container .comment').on('click',function(){
-        $(this).html('加载中...');
-        var disqus_shortname = 'somewind';
-        var that = this;
-        BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
-});
     </script>
 </div>
 
